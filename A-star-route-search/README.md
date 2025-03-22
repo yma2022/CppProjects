@@ -98,8 +98,28 @@ The testing executable is also placed in the `build` directory. From within `bui
       * Configure CLion to use the WSL [toolchain](https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-product.html#wsl-tooclhain)
       * Use the WSL toolchain to build the project
       * If you are still facing errors, visit this [link](https://github.com/udacity/CppND-Route-Planning-Project/issues/9).
-     
-
+      * If error pops, 
+        ```
+        size of array ‘altStackMem’ is not an integral constant-expression
+        7320 |     char FatalConditionHandler::altStackMem[SIGSTKSZ] = {};
+              |                                             ^~~~~~~~
+        gmake[2]: *** [P0267_RefImpl/Tests/CMakeFiles/tests.dir/build.make:76: P0267_RefImpl/Tests/CMakeFiles/tests.dir/main.cpp.o] Error 1
+        gmake[1]: *** [CMakeFiles/Makefile2:559: P0267_RefImpl/Tests/CMakeFiles/tests.dir/all] Error 2
+        ```
+        This is caused by old version of Catch2, commentout in CMakeList this section can work around this:
+        ```
+        if( NOT DEFINED IO2D_WITHOUT_TESTS )
+          enable_testing()
+          add_subdirectory(P0267_RefImpl/Tests)
+        endif()
+        ```
 * If you are facing errors with --config try to remove -- from the command.
+* If googletest library reports:
+  ```
+  CppND-Route-Planning-Project/thirdparty/googletest/googletest/src/gtest-death-test.cc:1287:24: error: ‘dummy’ may be used uninitialized [-Werror=maybe-uninitialized]
+  1287 |   StackLowerThanAddress(&dummy, &result);
+        |   ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+  ```
+  Just change `int dummy;` to `int dummy = 0;` in the file as a quick remedy.
 
 
