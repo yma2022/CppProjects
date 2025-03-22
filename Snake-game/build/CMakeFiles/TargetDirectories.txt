@@ -1,3 +1,0 @@
-/mnt/c/Users/youlo/Desktop/workplace/CppProjects/CppND-Capstone-Snake-Game/build/CMakeFiles/SnakeGame.dir
-/mnt/c/Users/youlo/Desktop/workplace/CppProjects/CppND-Capstone-Snake-Game/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/youlo/Desktop/workplace/CppProjects/CppND-Capstone-Snake-Game/build/CMakeFiles/rebuild_cache.dir
