@@ -12,6 +12,9 @@ This is a collection of projects that I'm working on as part of my learning jour
 - [Route Planning Project](CppND-Route-Planning-Project/) - A route planning application using A* search algorithm
 - [Snake Game](CppND-Capstone-Snake-Game/) - A classic Snake game implementation
 - [Hello World](CppND-Capstone-Hello-World/) - A basic C++ project template
+- [Concurrent Traffic Simulation](CppND-Program-a-Concurrent-Traffic-Simulation/) - A multi-threaded traffic simulation program
+- [Garbage Collector](CppND-Garbage-Collector/) - A custom garbage collector implementation
+- [Memory Management Chatbot](CppND-Memory-Management-Chatbot/) - A chatbot demonstrating memory management concepts
 
 ## Getting Started
 
